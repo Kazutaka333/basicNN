@@ -1,4 +1,4 @@
-import neuralNetwork
+from neuralNetwork import *
 import random
 
 def main():
@@ -44,10 +44,10 @@ def main():
 
     all_values = test_data_list[random.randint(0,size-1)].split(',')
     image_array = numpy.asfarray(all_values[1:]).reshape((28,28))
-    matplotlib.pyplot.imshow(image_array, cmap='Greys',interpolation='None')
+
     picData = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
     result = n.query(picData)
-    print("この文字は"+str(numpy.argmax(result))+"やで。")
+    print("この文字は" + str(numpy.argmax(result)) + "やで。")
     print("正解は" + str(all_values[0]) + "やで。")
 
     weightF = open("weights.txt", "w")
