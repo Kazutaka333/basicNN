@@ -11,4 +11,16 @@ dependancies:
 
     scipy
 
-    matplotlib
+
+# The following commands creates the environment to run this program
+
+pip install virtualenv
+
+virtualenv --system-site-packages [directory name]
+
+cp /path/to/basicNN/. [directory name]/
+
+pip3 install numpy
+
+pip3 install scipy
+
