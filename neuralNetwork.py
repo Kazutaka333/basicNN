@@ -1,7 +1,7 @@
 import numpy
 # scipy.special for the sigmoid function expit()
 import scipy.special
-import matplotlib.pyplot
+
 
 # neural network class definition
 
@@ -32,13 +32,17 @@ class neuralNetwork:
         self.who = numpy.random.normal(0.0, 
                                        pow(self.onodes, -0.5), 
                                        (self.onodes, self.hnodes))
+
+        # activation function is the sigmoid function
+        self.activation_function = lambda x: scipy.special.expit(x)
+
         pass
     
     # train the neural network
     def train(self, inputs_list, targets_list):
         # convert inputs list to 2d array
         inputs = numpy.array(inputs_list, ndmin=2).T
-        targets = numpy.array(inputs_list, ndmin=2).T
+        targets = numpy.array(targets_list, ndmin=2).T
         
         # calculate signals into hidden layer
         hidden_inputs = numpy.dot(self.wih, inputs)
@@ -50,7 +54,7 @@ class neuralNetwork:
         # calculate the signals emerging from final output layer
         final_outputs = self.activation_function(final_inputs)
 
-	# error is the (target - actual)
+        # error is the (target - actual)
         output_errors = targets - final_outputs
         
         # hidden layer error is the output_errors, split by weights, recombined 
