@@ -12,7 +12,7 @@ numpy
 scipy
 
 
-## The following commands creates the environment to run this program
+## The following command creates the environment to run this program
 
     pip install virtualenv
 
