@@ -7,22 +7,22 @@ The simplest form of neural network to understand the basic concept.
 
 dependancies:
     
-    numpy
+numpy
 
-    scipy
+scipy
 
 
-# The following commands creates the environment to run this program
+## The following commands creates the environment to run this program
 
-pip install virtualenv
+    pip install virtualenv
 
-virtualenv --system-site-packages [directory name]
+    virtualenv --system-site-packages [directory name]
 
-cp /path/to/basicNN/. [directory name]/
+    cp /path/to/basicNN/. [directory name]/
 
-pip3 install numpy
+    pip3 install numpy
 
-pip3 install scipy
+    pip3 install scipy
 
 
 ## main.py
