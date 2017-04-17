@@ -26,11 +26,11 @@ scipy
 
 
 ## main.py
-    This will train a neural network instance with training data sets (this 
-    process could take a while) and at the end it will check the performance 
-    with test data sets. 
+This will train a neural network instance with training data sets (this 
+process could take a while) and at the end it will check the performance 
+with test data sets. 
 
 ## trained.py
-    This program loads pre-trained weights for neural net so you can check the 
-    performance without waiting for your own training. This performance should
-    show the same result as main.py 
+This program loads pre-trained weights for neural net so you can check the 
+performance without waiting for your own training. This performance should
+show the same result as main.py 
