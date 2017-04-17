@@ -17,8 +17,12 @@ scipy
     pip install virtualenv
 
     virtualenv --system-site-packages [directory name]
-
+    
     cp /path/to/basicNN/. [directory name]/
+    
+    cd [directory name]
+    
+    source ./bin/activate
 
     pip3 install numpy
 
