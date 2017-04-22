@@ -3,7 +3,6 @@ import random
 
 def main():
     # number of input, hidden and output nodes
-
     input_nodes = 784
     hidden_nodes = 200
     output_nodes = 10
@@ -16,15 +15,15 @@ def main():
     training_data_list = training_data_file.readlines()
     training_data_file.close()
     
-    print("tarining ... (this could take more than 10 minutes)")
+    print("tarining ... (this could take more than several minutes)")
 
     # train the neural network
     epochs = 2
-    # go through all records in the training data set
     for i in range(epochs):
         for record in training_data_list:
-            # split the record by the ',' commas
+
             all_values = record.split(',')
+
             # scale and shift the inputs
             inputs = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
             # create the target output values (all 0.01, except the desired label
@@ -33,7 +32,6 @@ def main():
             # all_values[0] is the target label for this record
             targets[int(all_values[0])] = 0.99
             n.train(inputs, targets)
-            pass
 
     test_data_file = open("MNIST/mnist_test.csv", 'r')
     test_data_list = test_data_file.readlines()
@@ -53,8 +51,6 @@ def main():
         
         correct_label = int(all_values[0])
         
-       # print(correct_label, "correct label")
-        
         # scale and shift the inputs
         inputs = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
         
@@ -62,17 +58,16 @@ def main():
         
         label = numpy.argmax(outputs)
         
-       # print(label, "network's answer")
-        
         if (label == correct_label):
             scorecard.append(1)
         else:
             scorecard.append(0)
-            pass 
 
     print("performance = " + str(sum(scorecard)/len(scorecard)*100) + "%")
-    # numpy.savetxt('wih.txt', n.getWIH())
-    # numpy.savetxt('who.txt', n.getWHO())
+    
+    # you can save your weights if you comments out theses
+    # numpy.savetxt('wih_new.txt', n.getWIH())
+    # numpy.savetxt('who_new.txt', n.getWHO())
     
 	
 
