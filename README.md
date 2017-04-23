@@ -42,3 +42,5 @@ with test data sets.
 This program loads pre-trained weights for neural net so you can check the 
 performance without waiting for your own training. This performance should
 show the same result as main.py 
+
+TODO how to test on your own image file
