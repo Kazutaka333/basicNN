@@ -11,6 +11,8 @@ numpy
 
 scipy
 
+Pillow
+
 
 ## The following command creates the environment to run this program
 
@@ -27,6 +29,8 @@ scipy
     pip3 install numpy
 
     pip3 install scipy
+
+    pip3 install Pillow
 
 
 ## main.py
